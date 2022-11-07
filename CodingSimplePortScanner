@@ -1,0 +1,22 @@
+- In video 2.1, where a simple code to check if port was opened was built.
+A python code that establishes connection and checks if specific port number
+is closed or opened for a server. 
+- The socket package in python was used to establish the connection.
+After importation, an object was created to handle the function for operation
+
+Code:
+
+import socket
+
+host = "10.10.0.126"
+port = 443 (https)
+
+soc = socket.socket(AF_INET, SOCK_STREAM)
+
+def portscanner(port):
+	if soc.connect_ex((host, port)):
+		Print ("Port %d is closed!" % (port))
+	else:
+		print ("Port %d is opened!" % (port))
+
+portscanner(port)
